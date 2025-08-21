@@ -1,5 +1,7 @@
 package org.iclass.board.dto;
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,10 +20,8 @@ public class CommunityCommentDTO {
 	private int mref;
 	private String writer;
 	private String content;
-//	private Date createdAt;   // 문자열 변환 출력 yyyy-MM-dd
+	private Date createdAt;
 	private String regDate;
 	private String ip;
-	
-	
-	
+
 }
