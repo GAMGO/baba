@@ -13,7 +13,7 @@
 		VALUES (comment_idx_seq.nextval,#{mref},#{writer},#{content})
 	</insert>
 	<!-- 2. 댓글 삭제 -->
-	<delete id="delete" parameterType="long">
+	<delete id="delete" parameterType="int">
 		DELETE FROM communityComments c WHERE idx = #{idx}
 	</delete>
 	<!-- 3. 메인글의 댓글 목록 가져오기 -->

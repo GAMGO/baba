@@ -87,7 +87,7 @@
 					</div>
 				</div>
 				<hr />
-				<h4>댓글
+				<h4>Comments
 					<span class="badge" style="background-color: #bebebf;color:#6f42c1;font-size:0.7rem;">
 						[[${dto.commentCount}]]</span>
 				</h4>
@@ -108,11 +108,24 @@
 						</li>
 					</ul>
 					<!-- 여기 까지 댓글 목록 -->
+					<div class="row">
+							<input type="hidden" id="writer" th:value="${session.username}">
+							<input type="hidden" id="mref" th:value="${dto.idx}">
+						<div class="input-group mb-3">
+							<textarea class = "form-control" rows = "5" id="content"></textarea>
+							<th:block th:if="${session.username!=null}"><button type="button" class="btn btn-outline-secondary" id="btnSave">등록</button></th:block>
+							<th:block th:unless="${session.username!=null}"><button type="button" class="btn btn-outline-secondary" id="btnLogin">로그인하기</button></th:block>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+<script>
+	const username = '[[${session.username}]]'
+	const mref = '[[${dto.idx}]]'
+</script>
+<script src="/js/comments.js"></script>
 </body>
 
 </html>

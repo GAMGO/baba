@@ -16,6 +16,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CommunityDTO {
+	private long r;
 	private long idx;
 	private String writer;
 	private String title;
